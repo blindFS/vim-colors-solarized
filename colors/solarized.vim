@@ -242,8 +242,9 @@ let colors_name = "solarized"
 " neutral gray monotone palette component)
 if (has("gui_running") && g:solarized_degrade == 0)
     let s:vmode       = "gui"
-    let s:base03      = "#002b36"
-    let s:base02      = "#073642"
+    " let s:base03      = "#002b36"
+    let s:base03      = "#000b10"
+    let s:base02      = "#102026"
     let s:base01      = "#586e75"
     let s:base00      = "#657b83"
     let s:base0       = "#839496"
@@ -595,19 +596,21 @@ exe "hi! Error"          .s:fmt_bold   .s:fg_red    .s:bg_none
 exe "hi! Todo"           .s:fmt_bold   .s:fg_magenta.s:bg_none
 "       *Todo            anything that needs extra attention; mostly the
 "                        keywords TODO FIXME and XXX
-
-exe "hi! Class" .s:fmt_bold .s:fg_magenta.s:bg_none
-exe "hi! DefinedName"          "Define
-exe "hi! Enumerator"           "Enumerator
-exe "hi! Function" .s:fmt_bold .s:fg_orange .s:bg_none             "Function or method
-exe "hi! EnumerationName"      "Enumeration name
-exe "hi! Member"               "Member (of structure or class)
-exe "hi! Structure"            "Structure Name
-exe "hi! Union"                "Union Name
-exe "hi! GlobalConstant"       "Global Constant
-exe "hi! GlobalVariable"       "Global Variable
-exe "hi! LocalVariable"        "Local Variable
-
+exe "hi! Class"            . s:fmt_none . s:fg_violet  . s:bg_none
+exe "hi! Structure"        . s:fmt_none . s:fg_red     . s:bg_none
+exe "hi! StorageClass"     . s:fmt_none . s:fg_magenta . s:bg_none
+exe "hi! DefinedName"      . s:fmt_bold . s:fg_orange  . s:bg_none
+exe "hi! Member"           . s:fmt_none . s:fg_base1   . s:bg_none
+exe "hi! Union"            . s:fmt_none . s:fg_base2   . s:bg_base02
+exe "hi! Label"            . s:fmt_none . s:fg_cyan    . s:bg_none
+exe "hi! Function"         . s:fmt_none . s:fg_blue    . s:bg_base02
+exe "hi! Enumerator"       . s:fmt_none . s:fg_yellow  . s:bg_none
+exe "hi! EnumerationName"  . s:fmt_none . s:fg_magenta . s:bg_base01
+exe "hi! EnumerationValue" . s:fmt_none . s:fg_magenta . s:bg_base02
+exe "hi! LocalVariable"    . s:fmt_undr . s:fg_blue    . s:bg_none
+exe "hi! GlobalConstant"   . s:fmt_undr . s:fg_cyan    . s:bg_none
+exe "hi! GlobalVariable"   . s:fmt_undr . s:fg_blue    . s:bg_base02
+"
 "}}}
 " Extended highlighting "{{{
 " ---------------------------------------------------------------------
